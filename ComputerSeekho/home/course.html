@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+    <title>CourseAdmin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Admin1style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPanel</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="Admin1style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+
+
+<body bgcolor="Gainsboro">
+    <marquee direction="right" bgcolor="Darkseagreen"><img src="images/logo.png"></img>
+    </marquee>
+    <marquee scrollamount="05" bgcolor="Darksalmon" behavior="alternate" width="100%" height="200%">
+        <font color="black">
+            <h1>SM VITA MUMBAI</h1>
+        </font>
+    </marquee>
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">
+            Admin Panel
+        </div>
+        <ul>
+            <li class="active"><a href="Admin1.html">Home</a></li>
+            <li>
+                <a href="#" class="feat-btn">Course
+        <span class="fas fa-caret-down first"></span>
+        </a>
+                <ul class="feat-show">
+                    <!-- <li><a href="#">PG DAC</a></li> 
+                    <li><a href="#">PG DBDA</a></li>
+                    <li><a href="#">MSCIT</a></li>-->
+                    <li><a href="course.html">Edit Course</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="serv-btn">Student
+        <span class="fas fa-caret-down second"></span>
+        </a>
+                <ul class="serv-show">
+                    <li><a href="Student.html">Student of PG DAC</a>
+                        <!-- <a href="#">Batch 1</a>
+                        <a href="#">Batch 2</a>
+                        <a href="#">Batch 3</a> -->
+                    </li>
+                    <li><a href="Student.html">Student of PG DBDA</a>
+                        <!-- <a href="#">Batch 1</a> 
+                        <a href="#">Batch 2</a>
+                        <a href="#">Batch 3</a>-->
+                    </li>
+                    <li><a href="Student.html">Student of MSCIT</a>
+                        <!-- <a href="#">Batch 1</a>
+                        <a href="#">Batch 2</a>
+                        <a href="#">Batch 3</a> -->
+                    </li>
+                </ul>
+            </li>
+            <li><a href="Followup.html">Follow up</a></li>
+            <li><a href="Enquiry.html">Enquiry</a></li>
+            <!-- <li><a href="#">Shortcuts</a></li> -->
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Signout.html">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <h3>Admin Course Add or Delete</h3>
+    </div>
+    <div id="iam" class="table-responsive-sm">
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Course ID</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Eligibility</th>
+                    <th scope="col">Fees</th>
+                    <th scope="col">Course Type</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                        </div>
+                    </th>
+                    <td>Dac</td>
+                    <td>6 months</td>
+                    <td>Engineering/Msc</td>
+                    <td>90000</td>
+                    <td>PG diploma</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">2
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+
+                        </div>
+                    </th>
+                    <td>DBDA</td>
+                    <td>6 months</td>
+                    <td>Engineering/Msc</td>
+                    <td>70000</td>
+                    <td>PG diploma</td>
+                </tr>
+                <tr>
+                    <th scope="row">3
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                        </div>
+                    </th>
+                    <td>MSCIT</td>
+                    <td>3 months</td>
+                    <td>MATRICULATION</td>
+                    <td>5000</td>
+                    <td>CERTIFICATE course</td>
+                </tr>
+                <input type="submit" value="ADD">
+                <input type="submit" value="DELETE">
+            </tbody>
+
+
+        </table>
+
+
+
+        <script>
+            $('.btn').click(function() {
+                $(this).toggleClass("click");
+                $('.sidebar').toggleClass("show");
+            });
+            $('.feat-btn').click(function() {
+                $('nav ul .feat-show').toggleClass("show");
+                $('nav ul .first').toggleClass("rotate");
+            });
+            $('.serv-btn').click(function() {
+                $('nav ul .serv-show').toggleClass("show1");
+                $('nav ul .second').toggleClass("rotate");
+            });
+            $('nav ul li').click(function() {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            $.get("navigation.html", function(data) {
+                $("#nav-placeholder").replaceWith(data);
+            });
+        </script>
+</body>
+
+</html>

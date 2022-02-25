@@ -1,0 +1,199 @@
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git config --global user.name "shivam993533"
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git config --global user.email"shivam993533@gmail.com"
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git --list
+unknown option: --list
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=shivam993533
+user.email=shivam993533@email.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ sum.java
+bash: sum.java: command not found
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ sum file.java
+sum: file.java: No such file or directory
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ about.html
+bash: about.html: command not found
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ about file.html
+bash: about: command not found
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ touch sum.java
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ touch file.txt
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ touch file1.txt
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/dell/Desktop/git/.git/
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git add file.txt
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git add file1.txt
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+        new file:   file1.txt
+
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git commit -m "second comit"
+[master 8eb3688] second comit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+ create mode 100644 file1.txt
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git add .
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+        modified:   file1.txt
+
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git commit -m "after changes"
+[master a9331c8] after changes
+ 2 files changed, 2 insertions(+)
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git remote add origin https://github.com/shivam993533/shivam993533.git
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git remote
+origin
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (20/20), 2.62 KiB | 335.00 KiB/s, done.
+Total 20 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/shivam993533/shivam993533.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ ^C
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$ ^C
+
+dell@DESKTOP-RJTQ1TS MINGW64 ~/Desktop/git (master)
+$

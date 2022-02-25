@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPanel</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/Admin1style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body bgcolor="Gainsboro">
+    <marquee direction="right" bgcolor="Darkseagreen"><img src="images/logo.png"></img>
+    </marquee>
+    <marquee scrollamount="05" bgcolor="Darksalmon" behavior="alternate" width="100%" height="200%">
+        <font color="black">
+            <h1>SM VITA MUMBAI</h1>
+        </font>
+    </marquee>
+    <div class="container ">
+        <div class="item shark-1 ">
+            <a href="registrationform.html " target="blank "> <img src="images/sss.jpg " width="100 " alt=" "></a>
+        </div>
+    </div>
+
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">
+            Admin Panel
+        </div>
+        <ul>
+            <li class="active"><a href="Admin1.html">Home</a></li>
+            <li>
+                <a href="#" class="feat-btn">Course
+        <span class="fas fa-caret-down first"></span>
+        </a>
+                <ul class="feat-show">
+                    <!-- <li><a href="#">PG DAC</a></li>
+                    <li><a href="#">PG DBDA</a></li>
+                    <li><a href="#">MSCIT</a></li> -->
+                    <li><a href="course.html">Edit Course</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="serv-btn">Student
+        <span class="fas fa-caret-down second"></span>
+        </a>
+                <ul class="serv-show">
+                    <li><a href="Student.html"> PG DAC</a>
+                        <!-- <a href="#">Batch 1</a> 
+                        <a href="#">Batch 2</a>
+                        <a href="#">Batch 3</a>-->
+                    </li>
+                    <li><a href="Student.html"> PG DBDA</a>
+                        <!-- <a href="#">Batch 1</a> 
+                        <a href="#">Batch 2</a>
+                        <a href="#">Batch 3</a>-->
+                    </li>
+                    <li><a href="Student.html"> MSCIT</a>
+                        <!-- <a href="#">Batch 1</a> 
+                        <a href="#">Batch 2</a>
+                        <a href="#">Batch 3</a>-->
+                    </li>
+                </ul>
+            </li>
+            <li><a href="Followup.html">Follow up</a></li>
+            <li><a href="Enquiry.html">Enquiry</a></li>
+            <!-- <li><a href="#">Shortcuts</a></li> -->
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Signout.html">Sign Out</a></li>
+        </ul>
+    </nav>
+    <!-- <div class="content">
+  <div class="header">
+     Sidebar Menu with sub-menu
+  </div>
+  <p>
+     HTML CSS & Javascript (Full Tutorial)
+  </p>
+</div> -->
+    <script>
+        $('.btn').click(function() {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        $('.feat-btn').click(function() {
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function() {
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+        $('nav ul li').click(function() {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+
+</body>
+
+</html>

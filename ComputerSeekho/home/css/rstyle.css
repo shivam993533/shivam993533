@@ -1,0 +1,31 @@
+h2 {
+    font-family: Calibri;
+    font-size: 25pt;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(238, 121, 131);
+    text-align: center;
+    text-decoration: underline
+}
+
+table {
+    font-family: Calibri;
+    color: rgb(10, 10, 10);
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: bold;
+    text-align: ;
+    background-color: rgb(195, 211, 235);
+    border-collapse: collapse;
+    border: 2px solid rgb(238, 121, 131)
+}
+
+table.inner {
+    border: 0px
+}
+
+.shark-1 {
+    position: fixed;
+    top: 250px;
+    right: 4px;
+}
